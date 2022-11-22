@@ -20,9 +20,12 @@
                     <tr *ngFor="let p of productf ">
                         <td><img *ngIf="ba=='masquer'" [src]=p.urlimage width="100px" /></td>
                         <td>{{p.id}}</td>
-                        <td>{{p.nom |uppercase}}</td>
+                        <!-- <td><a routerLink="/product/:{{p.id}}">{{p.nom |uppercase}}</a></td> -->
+                        <td><a [routerLink]="['/product',p.id]">{{p.nom |uppercase}}</a></td>
                         <td>{{p.prix|number:'.2-2'}}</td>
                         <td>{{p.quantite}}</td>
+                        <td><button (click)=supprimer(p.id)><i class="bi bi-trash3-fill"></i>
+                        </button></td>
                     </tr>
                 </tbody>
             </table>

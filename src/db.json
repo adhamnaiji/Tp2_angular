@@ -1,0 +1,10 @@
+{
+  "produit": [
+    {
+      "id": "2",
+      "nom": "imprimante",
+      "quantite": 50,
+      "urlimage": "./assets/images/imprimante.jpg"
+    }
+  ]
+}
